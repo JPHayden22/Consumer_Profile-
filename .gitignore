@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.private/
+*.log
+.env*
+.DS_Store
+.pnpm-store/
+*.tsbuildinfo
