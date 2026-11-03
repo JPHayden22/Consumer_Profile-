@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Orbit permission</title>
+    <style>
+      body {
+        width: 290px;
+        padding: 22px;
+        background: #17181f;
+        color: #ecebf1;
+        font: 13px system-ui;
+      }
+      h1 {
+        color: #bba4fa;
+      }
+      p {
+        line-height: 1.7;
+        color: #b2afbf;
+      }
+      button {
+        padding: 12px;
+        background: #bba4fa;
+        border: 0;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>orbit.</h1>
+    <p>
+      With your approval, Orbit reads visited page URLs, titles, and visit times
+      for a period you choose in the dashboard. Records go only to the
+      authorized dashboard in your browser memory. No passwords, cookies, or
+      tokens. No uploads.
+    </p>
+    <button id="grant">Approve history access</button
+    ><button id="revoke">Revoke history access</button>
+    <p id="status" role="status"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>

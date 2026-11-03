@@ -1,0 +1,11 @@
+# Orbit extension privacy disclosure
+
+Single purpose: transfer a user-selected period of Chrome history into the authorized Orbit dashboard for local, explainable consumer analysis.
+
+Optional history permission is requested only when the user clicks Approve history access in the extension popup. The dashboard separately asks for consent before a transfer. Data: page titles, sanitized URLs, visit timestamps. URL query strings, fragments and embedded credentials are excluded from transfers; page titles and pathnames can still reveal private information. No passwords, authentication tokens, cookies, payment information or background observation. No storage API. No third-party servers or analytics. Chrome may provide synced history depending on browser settings.
+
+Data is held only in dashboard memory. Delete individual records or reset the dashboard; closing/reloading clears the session. Revoke via the dashboard, extension popup, or Chrome extension settings. Revocation prevents future reading; delete already transferred records separately. The app does not modify or delete Chrome history.
+
+Production destination: https://jphayden22.github.io/Consumer_Profile-/ . Explicit local port-5173 loopback development paths are also declared; no arbitrary sites. Hosts share a GitHub Pages origin: all code controlled by that account must be trusted. Chrome history permission is technically broad; application code limits reads to selected dates and never invokes history write APIs.
+
+Web Store preparation: publish this disclosure at a stable public URL, supply an owner support contact, upload ZIP, provide screenshots from an empty or expressly authorized session, declare browsing activity collection/use for the single local analysis purpose and no sale/advertising transfer. Permission justification: history is necessary to retrieve the approved visited URLs and getVisits timestamps. Content script patterns are required for local dashboard communication. No remotely hosted executable code. Review current Chrome Web Store questionnaire and policies at submission; owner account, declarations and review are external steps. No listing has been submitted or approved.

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Orbit \u00b7 Private Consumer Intelligence",
+  "version": "1.0.0",
+  "description": "Analyze your approved Chrome history locally in your Orbit dashboard. No uploads or background collection.",
+  "optional_permissions": ["history"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://jphayden22.github.io/Consumer_Profile-/*",
+        "http://localhost/Consumer_Profile-/*",
+        "http://127.0.0.1/Consumer_Profile-/*"
+      ],
+      "js": ["bridge.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
+}
